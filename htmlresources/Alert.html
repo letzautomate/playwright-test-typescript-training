@@ -1,0 +1,44 @@
+<html><head>
+        <link rel="stylesheet" href="mystyle.css">
+    </head>    
+<body>
+	
+	<script>
+		function Alert_Click(){
+            alert("This is an Alert Box.");
+             document.getElementById("msg").innerHTML = "You clicked on Ok button."
+        }
+        function Confirm_Click()
+        {
+            var userPreference;
+
+            if (confirm("Do you want to save changes?") == true)
+            {
+			    userPreference = "Data saved successfully!";
+		    }
+		    else 
+		    {
+			    userPreference = "Save Canceled!";
+		    }
+
+		    document.getElementById("msg").innerHTML = userPreference; 
+        }
+        
+        function Prompt_Click()
+        {
+            var tenure = prompt("Please enter any number", "10");
+            document.getElementById("msg").innerHTML = "You have entered number: " + tenure;
+        }
+    </script>
+    
+
+    <div id="alerts">
+    <p id="msg">You clicked on Ok button.</p>
+    <p><button type="button" id="alert-button" onclick="Alert_Click()">Trigger an Alert</button></p>
+    <p><button type="button" id="confirm-button" onclick="Confirm_Click()">Trigger a Confirmation</button></p>
+    <p><button type="button" id="prompt-button" onclick="Prompt_Click()">Trigger a Prompt</button></p>
+
+    </div>
+    
+
+</body></html>
