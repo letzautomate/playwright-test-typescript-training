@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 
-test.only('Button Click', async({page}) => {
+test('Button Click', async({page}) => {
     const url = "file:///"+process.cwd()+"/htmlresources/Button.html"
     await page.goto(url)
     const button = page.locator("//button[text()='Click Me!']")

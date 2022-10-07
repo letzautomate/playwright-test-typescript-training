@@ -4,8 +4,8 @@
   "description": "This Repo maintains tests to make the user understand the features of Playwright",
   "main": "index.js",
   "scripts": {
-    "chromium": "npx playwright test --project=chromium --reporter=html && npx playwright show-report",
-    "chromium:debug": "npx playwright test --debug"
+    "chromium": "npx playwright test --project=chromium --headed --reporter=html && npx playwright show-report",
+    "chromium:debug": "npx playwright test --project=chromium --headed --debug"
   },
   "repository": {
     "type": "git",
